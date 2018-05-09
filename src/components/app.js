@@ -22,7 +22,8 @@ class App extends Component {
       <div className="App">
         {console.log(this.props.orders)}
         <h1>Orders</h1>
-        <table>
+        <div className='table-responsive'>
+        <table className={'table'}>
           <thead>
           <tr>
             <th>Email</th>
@@ -38,8 +39,7 @@ class App extends Component {
                     {orders[val].order.map((orderIt, keyIt) => {
                       return (
                         <div key={keyIt}>
-                          <p>{orderIt.title}</p>
-                          <p>{orderIt.price}</p>
+                          <p>{orderIt.title} {orderIt.price}</p>
                         </div>
                       );}
                     )}
@@ -49,6 +49,7 @@ class App extends Component {
             })}
           </tbody>
         </table>
+        </div>
       </div>
     );
   }
