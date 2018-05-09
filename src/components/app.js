@@ -26,6 +26,7 @@ class App extends Component {
         <table className={'table'}>
           <thead>
           <tr>
+            <th>Id</th>
             <th>Email</th>
             <th>Order</th>
           </tr>
@@ -34,6 +35,7 @@ class App extends Component {
           {(Object.keys(orders)).map((val , key) => {
               return (
                 <tr key={key}>
+                  <td>{key + 1}</td>
                   <td>{orders[val].email}</td>
                   <td>
                     {orders[val].order.map((orderIt, keyIt) => {
